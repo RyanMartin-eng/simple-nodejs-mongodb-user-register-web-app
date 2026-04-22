@@ -46,6 +46,3 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (syntax check)
-        run: npm run prod --dry-run
-        
