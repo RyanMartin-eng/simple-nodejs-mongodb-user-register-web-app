@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5500:5500"
+    environment:
+      - PORT=5500
+      - DB_URL=mongodb://db:27017/registerApp
+    depends_on:
+      - db
+  db:
+    image: mongo:5.0
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
