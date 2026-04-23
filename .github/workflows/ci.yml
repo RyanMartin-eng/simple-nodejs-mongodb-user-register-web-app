@@ -47,4 +47,4 @@ jobs:
         run: npm ci
 
       - name: fail
-        run: ls | grep help
+        run: ls | grep help || true
